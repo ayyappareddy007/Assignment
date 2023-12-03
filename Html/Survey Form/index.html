@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Survey Form</title>
+</head>
+
+<body>
+
+  <form id="surveyForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country" required>
+      <option value="">Choose a country</option>
+      <option value="usa">USA</option>
+      <option value="canada">Canada</option>
+      <option value="india">India</option>
+      <option value="russia">Russia</option>
+      <option value="brazil">Brazil</option>
+      <option value="united kingdom">UK</option>
+      <option value="qatar">Qatar</option>
+      <option value="germany">Germany</option>
+      <option value="japan">Japan</option>
+      <option value="yemen">Yemen</option>
+      <option value="oman">Oman</option>
+      <option value="iraq">Iraq</option>
+    </select>
+
+    <label>Gender:</label>
+    <input type="checkbox" id="male" name="gender" value="male">Male
+    <input type="checkbox" id="female" name="gender" value="female">Female
+    <input type="checkbox" id="others" name="gender" value="others">Others
+
+    <label for="profession">Profession:</label>
+    <input type="text" id="profession" name="profession" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mobile">Mobile Number:</label>
+    <input type="tel" id="mobile" name="mobile" required>
+
+    <button type="submit" onclick="submitForm()">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+
+  <div id="popup" class="popup">
+    <span onclick="closePopup()" style="cursor: pointer; float: right;">&times;</span>
+    <h2>Survey Results</h2>
+    <div id="popupContent"></div>
+  </div>
+
+  <div id="overlay" class="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
